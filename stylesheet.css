@@ -3,7 +3,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 16px 32px;
-    background: white;
 }
 
 .menu ul {
@@ -19,12 +18,24 @@
     text-decoration: none;
 }
 
+.menu ul a {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
 .menu a:hover {
     text-decoration: underline;
 }
 
 .logo {
-    font-weight: bold;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
 }
 * {
     font-family: "Inter", sans-serif;
@@ -32,18 +43,161 @@
 
 body {
     margin: 0;
+    background-color: white;
+}
+
+.home-images {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: calc(100% - 96px);
+    max-width: 1136px;
+    margin: 48px auto;
+}
+
+.home-images img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    width: calc(100% - 96px);
+    max-width: 1136px;
+    margin: 0 auto 48px;
+}
+
+.project-heading {
+    width: calc(100% - 96px);
+    max-width: 1136px;
+    margin: 48px auto 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.project-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project-gallery--full img {
+    grid-column: 1 / -1;
+}
+
+.project-gallery--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.home-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    width: calc(100% - 96px);
+    max-width: 1136px;
+    margin: 0 auto 32px;
+}
+
+.home-footer a {
+    display: inline-flex;
+    align-items: center;
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.home-footer a:hover {
+    text-decoration: underline;
+}
+
+.instagram-link svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+    align-items: center;
+    gap: 48px;
+    width: calc(100% - 64px);
+    max-width: 960px;
+    margin: 72px auto;
+}
+
+.contact-content > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.contact-details p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.contact-links a {
+    display: inline-flex;
+    align-items: center;
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
 }
 
 .menu {
     width: 100%;
     box-sizing: border-box;
-    background-color: #f4c59a; /* apricot */
+    background-color: #FFD0A3;
 }
 
 .cv {
     max-width: 960px;
     margin: 0 auto;
-    padding: 24px 32px 64px;
+    padding: 72px 32px 64px;
+}
+
+.artist-bio {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.artist-bio p {
+    margin: 0;
+}
+
+.cv-divider {
+    border: 0;
+    border-top: 1px solid #222;
+    margin: 48px 0 64px;
 }
 
 .cv-section {
@@ -52,7 +206,10 @@ body {
 
 .cv h2 {
     margin: 0 0 24px;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
     line-height: 1.2;
 }
 
@@ -61,8 +218,8 @@ body {
     grid-template-columns: 64px minmax(0, 1fr);
     gap: 16px;
     margin-bottom: 24px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
     line-height: 1.5;
 }
 
@@ -71,6 +228,57 @@ body {
 }
 
 @media (max-width: 700px) {
+    .home-images {
+        width: calc(100% - 40px);
+        margin: 32px auto;
+    }
+
+    .project-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: calc(100% - 40px);
+        margin: 0 auto 32px;
+    }
+
+    .project-heading {
+        width: calc(100% - 40px);
+        margin: 32px auto 16px;
+    }
+
+    .home-footer {
+        width: calc(100% - 40px);
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .home-footer a {
+        font-size: 10px;
+        letter-spacing: 0.16em;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        width: calc(100% - 40px);
+        margin: 40px auto;
+    }
+
+    .contact-content > img {
+        max-width: 360px;
+    }
+
+    .contact-details p {
+        font-size: 16px;
+    }
+
+    .contact-links {
+        gap: 16px;
+    }
+
+    .contact-links a {
+        font-size: 10px;
+        letter-spacing: 0.16em;
+    }
+
     .menu {
         align-items: flex-start;
         flex-direction: column;
@@ -84,7 +292,15 @@ body {
     }
 
     .cv {
-        padding: 24px 20px 48px;
+        padding: 72px 20px 48px;
+    }
+
+    .artist-bio {
+        font-size: 16px;
+    }
+
+    .cv-divider {
+        margin: 36px 0 48px;
     }
 
     .cv-section {
@@ -94,5 +310,11 @@ body {
     .cv-row {
         grid-template-columns: 52px minmax(0, 1fr);
         font-size: 17px;
+    }
+}
+
+@media (max-width: 420px) {
+    .project-gallery {
+        grid-template-columns: 1fr;
     }
 }
