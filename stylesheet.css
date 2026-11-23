@@ -56,8 +56,13 @@ body {
 
 .home-images img {
     display: block;
-    width: 100%;
+    justify-self: center;
+    width: auto;
+    max-width: 100%;
     height: auto;
+    /* Fit the photo on screen below the menu (menu + top margin + a little space below). */
+    max-height: max(320px, calc(100vh - 140px));
+    max-height: max(320px, calc(100dvh - 140px));
 }
 
 .project-gallery {
