@@ -126,6 +126,10 @@ body {
     grid-column: span 2;
 }
 
+.project-gallery--last-wide {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr);
+}
+
 .project-gallery--centered {
     align-items: center;
     padding-top: 16px;
